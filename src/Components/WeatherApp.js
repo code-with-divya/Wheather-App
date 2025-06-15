@@ -26,7 +26,7 @@ export function WheatherApp() {
                 .then(res => {
                     let src = cloudyImg;
                     const weatherMain = res.data.weather[0].main.toLowerCase();
-                    
+
                     switch (weatherMain) {
                         case "clear":
                             src = clearImg;
@@ -59,10 +59,10 @@ export function WheatherApp() {
             <div className="container">
                 <div className="we">
                     <div className="search">
-                        <input 
-                            type="text" 
-                            placeholder="City Name...❤️" 
-                            onChange={e => setName(e.target.value)} 
+                        <input
+                            type="text"
+                            placeholder="City Name...❤️"
+                            onChange={e => setName(e.target.value)}
                         />
                         <button onClick={Click}>
                             <img src={search} alt="Search" />
